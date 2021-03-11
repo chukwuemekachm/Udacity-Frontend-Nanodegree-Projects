@@ -1,0 +1,32 @@
+@import 'components/typography.css';
+@import 'components/button.css';
+@import 'components/author.css';
+@import 'components/article.css';
+@import 'components/link.css';
+@import 'components/footer.css';
+@import 'components/social-link.css';
+
+footer {
+  background-color: var(--grey);
+  padding: var(--spacing-large);
+  color: var(--white);
+  border-radius: 4px;
+}
+
+.high-lighted-text {
+  padding: var(--spacing-medium);
+  border-left: 4px solid var(--black);
+}
+
+img.banner {
+  width: 100%;
+  height: 250px;
+  object-fit: fill;
+}
+
+.code {
+  padding: var(--spacing-large) var(--spacing-medium);
+  border-left: 4px solid var(--brand-primary);
+}
+
+

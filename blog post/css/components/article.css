@@ -1,0 +1,41 @@
+article.post {
+  width: 100%;
+  padding: var(--spacing-large);
+  background-color: var(--white-smoke);
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  article.post {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  article.post {
+    width: 32%;
+  }
+}
+
+article.post:hover {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+article.post a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+article.post h2 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-medium);
+}
+
+article.post p {
+  margin: 0;
+}
+
+article.post:hover h2 {
+  color: var(--brand-primary);
+}

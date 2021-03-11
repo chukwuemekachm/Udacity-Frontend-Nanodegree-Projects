@@ -1,0 +1,15 @@
+@import 'base.css';
+@import 'components.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body {
+  background-color: var(--white);
+  margin: 0;
+  padding: var(--spacing-medium);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}

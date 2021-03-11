@@ -1,0 +1,33 @@
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-smoke);
+  margin-right: var(--spacing-normal);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px 0 rgba(249, 249, 249, 0.6);
+}
+
+.social-link.facebook {
+  color: var(--steel-blue);
+}
+
+.social-link.twitter {
+  color: var(--dodger-blue);
+}
+
+.social-link.linkedin {
+  color: var(--dark-cyan);
+}
+
+.social-link:hover {
+  background-color: var(--brand-primary);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.social-link ion-icon {
+  margin-right: 0;
+}

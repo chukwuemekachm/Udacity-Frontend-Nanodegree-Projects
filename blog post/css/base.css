@@ -1,0 +1,27 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --brand-primary: #00b4e4;
+  --brand-secondary: #9c4dc9;
+  --grey: #616c76;
+  --light-grey: #d1d1d1;
+  --white-smoke: #efefef;
+  --dodger-blue: #1ea1f2;
+  --steel-blue: #4267b2;
+  --dark-cyan: #0077b5;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --base-font-size: 16px;
+
+  --spacing-small: 4px;
+  --spacing-normal: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-x-large: 32px;
+
+  font-size: var(--base-font-size);
+  font-family: Open Sans,Helvetica,sans-serif;
+}

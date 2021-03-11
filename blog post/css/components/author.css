@@ -1,0 +1,21 @@
+.author {
+  display: flex;
+}
+
+.author .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--spacing-medium);
+}
+
+.author .text-wrapper .name {
+  color: var(--brand-primary);
+}
+
