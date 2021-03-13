@@ -1,4 +1,4 @@
-.wrapper-main {
+.wrapper__main {
   display: grid;
   grid-template-areas:
     'header'
@@ -9,7 +9,7 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .wrapper-main {
+  .wrapper__main {
     display: grid;
     grid-template-areas:
       'header header header header'
@@ -26,28 +26,42 @@
   margin: 0;
 }
 
-.aside {
+.nav {
   grid-area: aside;
   width: 100%;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .aside {
+  .nav {
     width: 200px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .aside {
+  .nav {
     width: 300px;
   }
 }
 
-.aside .link, .aside button {
+.nav .link, .nav button {
   margin-bottom: var(--spacing-medium);
   width: fit-content;
+  display: inline-block;
 }
 
 .main {
@@ -67,20 +81,20 @@
   margin: var(--spacing-medium)  0;
 }
 
-.main .article-wrapper {
+.main .article__wrapper {
   display: flex;
   flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {
-  .main .article-wrapper {
+  .main .article__wrapper {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
 
-.main .article-wrapper .post {
+.main .article__wrapper .post {
   margin-bottom: var(--spacing-x-large);
 }
 

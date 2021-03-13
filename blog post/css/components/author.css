@@ -9,13 +9,13 @@
   object-fit: cover;
 }
 
-.author .text-wrapper {
+.author .text__wrapper {
   display: flex;
   flex-direction: column;
   margin-left: var(--spacing-medium);
 }
 
-.author .text-wrapper .name {
+.author .text__wrapper .name {
   color: var(--brand-primary);
 }
 

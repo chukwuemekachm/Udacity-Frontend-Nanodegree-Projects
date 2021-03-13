@@ -1,4 +1,4 @@
-.social-link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,24 +10,24 @@
   box-shadow: 0 1px 6px 0 rgba(249, 249, 249, 0.6);
 }
 
-.social-link.facebook {
+.social__link.facebook {
   color: var(--steel-blue);
 }
 
-.social-link.twitter {
+.social__link.twitter {
   color: var(--dodger-blue);
 }
 
-.social-link.linkedin {
+.social__link.linkedin {
   color: var(--dark-cyan);
 }
 
-.social-link:hover {
+.social__link:hover {
   background-color: var(--brand-primary);
   color: var(--white);
   cursor: pointer;
 }
 
-.social-link ion-icon {
+.social__link ion-icon {
   margin-right: 0;
 }

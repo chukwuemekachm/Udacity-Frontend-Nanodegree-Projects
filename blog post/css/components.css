@@ -13,9 +13,15 @@ footer {
   border-radius: 4px;
 }
 
-.high-lighted-text {
+.high__lighted__text {
   padding: var(--spacing-medium);
   border-left: 4px solid var(--black);
+  margin: 0 0 var(--spacing-large) 0;
+}
+
+.high__lighted__text blockquote {
+  padding: 0;
+  margin: 0 0 var(--spacing-medium) 0;
 }
 
 img.banner {
