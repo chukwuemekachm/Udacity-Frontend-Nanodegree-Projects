@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Journal</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+  <div class="background">
+    <div class="main__wrapper">
+
+      <header class="header">
+        <strong>Weather Journal App</strong>
+      </header>
+
+      <main class="main">
+        <h1>
+          <span class="temperature">
+            <strong id="temperature-value">16</strong>
+            <sup>o</sup>
+          </span>
+          <span class="location">
+            <span id="location-value" class="location__place"><strong>London</strong></span>
+            <span id="location-time" class="location__time">at 06:09 - Monday, 9 Sep '21</span>
+          </span>
+        </h1>
+      </main>
+
+      <aside class="aside">
+        <form id="form">
+          <div class="form__field">
+            <label for="zip">Enter Zipcode here</label>
+            <input id="zip" type="number" autocomplete="postal-code" placeholder="Enter zip code here" required />
+          </div>
+
+          <div class="form__field">
+            <label for="feelings">How are you feeling today?</label>
+            <textarea id="feelings" rows="5" cols="50" placeholder="Enter your feelings here" required></textarea>
+          </div>
+          <button id="generate" type="submit">Generate</button>
+        </form>
+
+        <div class="journal__wrapper" id="entryHolder">
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <div id="loader" class="loader__wrapper">
+    <div class="loader__ripple">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js" type="text/javascript"></script>
+
+</body>
+
+</html>
