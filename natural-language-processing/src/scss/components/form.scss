@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: var(--spacing-normal);
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid var(--light-grey);
+    color: var(--black);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  &__button {
+    padding: var(--spacing-medium) var(--spacing-x-large);
+    font-family: 'Open Sans',Helvetica,sans-serif;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--sea-green);
+    color: var(--white);
+  }
+}

@@ -1,0 +1,40 @@
+@import 'base.scss';
+@import 'components/score.scss';
+@import 'components/form.scss';
+@import 'components/loader.scss';
+
+.header {
+  &__title {
+    padding-left: 5%;
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    &__title {
+      padding-left: 20%;
+    }
+  }
+}
+
+.main__wrapper {
+  padding: 0 5%;
+  width: 100vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .main__wrapper {
+    padding: 0 20%;
+  }
+}
+
+#text-result {
+  display: none;
+
+  span > strong {
+    margin-top: var(--spacing-x-large);
+    margin-bottom: var(--spacing-medium);
+    display: block;
+  }
+}
