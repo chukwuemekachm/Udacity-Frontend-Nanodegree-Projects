@@ -6,10 +6,10 @@
   "scripts": {
     "build:dev": "rm -rf public && webpack --env.mode development",
     "build:prod": "rm -rf public && webpack --env.mode production",
-    "build": "yarn build:prod",
-    "prestart": "yarn build",
+    "build": "npm run build:prod",
+    "prestart": "npm run build",
     "start": "node server/server.js",
-    "dev": "yarn build:dev && rm -rf public && webpack-dev-server --env.mode development --open --hot",
+    "dev": "npm run build:dev && rm -rf public && webpack-dev-server --env.mode development --open --hot",
     "test": "jest"
   },
   "dependencies": {

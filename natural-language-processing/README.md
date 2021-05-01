@@ -11,20 +11,19 @@ To setup **Natural-Language-Processing-app**, these should be installed on your 
 
 
 ### Installation
-- Run ```npm install yarn ``` to install yarn
-- Run ``` yarn install ``` to install app dependencies
+- Run ``` npm install ``` to install app dependencies
 
 Now you've successfully installed **Natural-Language-Processing-app**
 
 ## Running the app
 
 To run your newly installed **Natural-Language-Processing-app**
-- Run ``` yarn start ```
+- Run ``` npm start ```
 
 ## Running the tests
 
 To run the tests om **Natural-Language-Processing-app**
-- Run ``` yarn test ```
+- Run ``` npm test ```
 
 
 ## License
