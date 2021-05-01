@@ -20,6 +20,11 @@
 
 const navEl = document.getElementById("navbar__list");
 const sectionList = document.querySelectorAll("section");
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
 
 /**
  * End Global Variables
@@ -27,29 +32,15 @@ const sectionList = document.querySelectorAll("section");
  *
  */
 
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+function createObserver(sections, handler) {
+  const observer = new IntersectionObserver(handler, observerOptions);
+  sections.forEach((section) => observer.observe(section));
 }
 
-function createVisibilityChange(el, callback) {
-  let previousVisibility;
-  return function handler() {
-    const visible = isElementInViewport(el);
-    if (visible != previousVisibility) {
-      previousVisibility = visible;
-      if (typeof callback === "function") {
-        callback(el, previousVisibility);
-      }
-    }
-  };
+function intersectionObserverHandler(entries) {
+  entries.forEach((entry) =>
+    updateSectionStyle(entry.target, entry.isIntersecting)
+  );
 }
 
 function updateSectionStyle(el, visibility) {
@@ -73,17 +64,6 @@ function updateNavLinkStyle(elementId) {
   });
 }
 
-function scrollElementIntoView(el) {
-  el.scrollIntoView();
-}
-
-function setHandlers(handler) {
-  window.addEventListener("DOMContentLoaded", handler, false);
-  window.addEventListener("load", handler, false);
-  window.addEventListener("scroll", handler, false);
-  window.addEventListener("resize", handler, false);
-}
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -105,22 +85,9 @@ sectionList.forEach((section) => {
 
 navEl.appendChild(fragment);
 
-// Add class 'active' to section when near top of viewport
-
-// Scroll to anchor ID using scrollTO event
-
 /**
  * End Main Functions
  * Begin Events
  *
  */
-
-sectionList.forEach((el) => {
-  setHandlers(createVisibilityChange(el, updateSectionStyle));
-});
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
+createObserver(sectionList, intersectionObserverHandler);
