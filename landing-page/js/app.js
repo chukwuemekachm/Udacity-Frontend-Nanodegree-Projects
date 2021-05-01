@@ -20,6 +20,7 @@
 
 const navEl = document.getElementById("navbar__list");
 const sectionList = document.querySelectorAll("section");
+const fragment = document.createDocumentFragment();
 const observerOptions = {
   root: null,
   rootMargin: "0px",
@@ -71,16 +72,18 @@ function updateNavLinkStyle(elementId) {
  */
 
 // build the nav
-const fragment = document.createDocumentFragment();
 
 sectionList.forEach((section) => {
   const listItem = document.createElement("li");
   listItem.innerHTML = `
-    <a href="#${section["id"]}" class="menu__link" data-id="${section["id"]}">
+    <a class="menu__link" data-id="${section["id"]}">
       ${section["attributes"]["data-nav"]["value"]}
     </a>
   `;
   fragment.appendChild(listItem);
+  listItem.addEventListener('click', () => {
+    section.scrollIntoView({ behavior: 'smooth' })
+  });
 });
 
 navEl.appendChild(fragment);

@@ -1,4 +1,3 @@
-# Landing Page Project
 This project manipulates the JS DOM to add dynamic content to a website landing page.
 
 ## Table of Contents
