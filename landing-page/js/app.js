@@ -18,8 +18,8 @@
  *
  */
 
- const navEl = document.getElementById('navbar__list');
- const sectionList = document.querySelectorAll("section");
+const navEl = document.getElementById("navbar__list");
+const sectionList = document.querySelectorAll("section");
 
 /**
  * End Global Variables
@@ -55,9 +55,22 @@ function createVisibilityChange(el, callback) {
 function updateSectionStyle(el, visibility) {
   if (visibility) {
     el.classList.add("active__section");
+    updateNavLinkStyle(el.id);
   } else {
     el.classList.remove("active__section");
   }
+}
+
+function updateNavLinkStyle(elementId) {
+  navEl.childNodes.forEach((node) => {
+    if (
+      node.firstElementChild["attributes"]["data-id"]["value"] === elementId
+    ) {
+      node.classList.add("active");
+    } else {
+      node.classList.remove("active");
+    }
+  });
 }
 
 function scrollElementIntoView(el) {
@@ -65,10 +78,10 @@ function scrollElementIntoView(el) {
 }
 
 function setHandlers(handler) {
-  window.addEventListener('DOMContentLoaded', handler, false);
-  window.addEventListener('load', handler, false);
-  window.addEventListener('scroll', handler, false);
-  window.addEventListener('resize', handler, false);
+  window.addEventListener("DOMContentLoaded", handler, false);
+  window.addEventListener("load", handler, false);
+  window.addEventListener("scroll", handler, false);
+  window.addEventListener("resize", handler, false);
 }
 
 /**
@@ -83,7 +96,9 @@ const fragment = document.createDocumentFragment();
 sectionList.forEach((section) => {
   const listItem = document.createElement("li");
   listItem.innerHTML = `
-    <a href="#${section["id"]}" class="menu__link">${section["attributes"]["data-nav"]["textContent"]}</a>
+    <a href="#${section["id"]}" class="menu__link" data-id="${section["id"]}">
+      ${section["attributes"]["data-nav"]["value"]}
+    </a>
   `;
   fragment.appendChild(listItem);
 });
@@ -100,7 +115,7 @@ navEl.appendChild(fragment);
  *
  */
 
- sectionList.forEach((el) => {
+sectionList.forEach((el) => {
   setHandlers(createVisibilityChange(el, updateSectionStyle));
 });
 

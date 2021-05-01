@@ -18,6 +18,11 @@ body {
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 
 /* Typeography General*/
 h1 {
@@ -72,6 +77,12 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+}
+
+.navbar__menu li.active .menu__link {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
 }
 
 .navbar__menu .menu__link {

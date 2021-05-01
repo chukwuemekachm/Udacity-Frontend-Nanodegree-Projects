@@ -1,4 +1,5 @@
 # Landing Page Project
+This project manipulates the JS DOM to add dynamic content to a website landing page.
 
 ## Table of Contents
 
@@ -11,3 +12,7 @@ The starter project has some HTML and CSS styling to display a static version of
 To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+
+## License
+
+This project is authored by **Chima Chukwuemeka** ([chukwuemekachm](https://github.com/chukwuemekachm)) and is licensed to use under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
