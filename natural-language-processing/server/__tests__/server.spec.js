@@ -49,7 +49,7 @@ const html = `
 describe('/', function () {
   test('should return the client app file', async function () {
     const { text, header: { 'content-type': contentType } } = await request(app).get('/');
-    expect(contentType).toEqual('text/html; charset=UTF-8');
+    expect(contentType.toLowerCase()).toEqual('text/html; charset=UTF-8'.toLowerCase());
     expect(text.trim()).toEqual(html.trim());
   });
 
