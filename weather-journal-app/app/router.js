@@ -1,19 +1,19 @@
 const { Router } = require("express");
 
 const router = Router();
-const postData = {};
+const projectData = {};
 
 /**
- * @description Returns the postData available on the server
+ * @description Returns the projectData available on the server
  */
-router.get("/data", (req, resp) => resp.status(200).json(postData));
+router.get("/data", (req, resp) => resp.status(200).json(projectData));
 
 /**
- * @description Adds a postData to the app and returns it
+ * @description Adds a projectData to the app and returns it
  */
 router.post("/data", (req, resp) => {
   const { date, temp, content } = req.body;
-  postData[date] = { date, temp, content };
+  projectData[date] = { date, temp, content };
 
   return resp.status(201).json({
     date,
