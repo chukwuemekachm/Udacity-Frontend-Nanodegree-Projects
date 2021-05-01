@@ -11,6 +11,7 @@ To setup **Natural-Language-Processing-app**, these should be installed on your 
 
 
 ### Installation
+- Run ```npm install yarn ``` to install yarn
 - Run ``` yarn install ``` to install app dependencies
 
 Now you've successfully installed **Natural-Language-Processing-app**
