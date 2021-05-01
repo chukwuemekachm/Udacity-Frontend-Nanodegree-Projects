@@ -10,6 +10,7 @@
     "prestart": "npm run build",
     "start": "node server/server.js",
     "dev": "npm run build:dev && rm -rf public && webpack-dev-server --env.mode development --open --hot",
+    "pretest": "npm run build",
     "test": "jest"
   },
   "dependencies": {
