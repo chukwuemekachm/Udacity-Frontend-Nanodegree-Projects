@@ -14,9 +14,7 @@ const envKeys = Object.keys(env).reduce((accumulator, current) => {
 
 module.exports = {
   context: path.join(__dirname, '../'),
-  entry: {
-    index: `${SRC_DIR}/js/index.js`,
-  },
+  entry: [`${SRC_DIR}/js/index.js`, `${SRC_DIR}/scss/style.scss`],
   output: {
     path: DIST_DIR,
     filename: '[name].js',

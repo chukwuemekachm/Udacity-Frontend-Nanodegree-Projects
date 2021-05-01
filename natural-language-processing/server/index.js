@@ -9,7 +9,6 @@ const zlib = require('zlib');
 const router = require('./router');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
 
 // Middlewares
 app.use(cors());
@@ -29,4 +28,4 @@ app.use((error, req, resp, next) => {
   });
 });
 
-app.listen(PORT, () => console.log(`API running on /${PORT}/api/v1 \nApp running on /${PORT}`));
+module.exports = app;

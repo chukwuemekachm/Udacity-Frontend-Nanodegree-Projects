@@ -1,4 +1,4 @@
-var staticCacheName = 'natural-language-processing';
+const staticCacheName = 'natural-language-processing';
 
 /**
  * Install service worker

@@ -21,6 +21,11 @@ Now you've successfully installed **Natural-Language-Processing-app**
 To run your newly installed **Natural-Language-Processing-app**
 - Run ``` yarn start ```
 
+## Running the tests
+
+To run the tests om **Natural-Language-Processing-app**
+- Run ``` yarn test ```
+
 
 ## License
 
