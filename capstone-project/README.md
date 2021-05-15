@@ -1,10 +1,10 @@
-# Weather-Journal App Project
+# Travel Planner (Capstone Project)
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This project allows users to planner their trip.
 
 ### Getting Started
-To setup **weather-journal-app**, these should be installed on your machine
+To setup **travel-planner**, these should be installed on your machine
 
 - [Node.js](https://nodejs.org/en/download/current/) 12 and above
 - [Git](https://git-scm.com/downloads)
@@ -13,11 +13,11 @@ To setup **weather-journal-app**, these should be installed on your machine
 ### Installation
 - Run ``` yarn install ``` to install app dependencies
 
-Now you've successfully installed **weather-journal-app**
+Now you've successfully installed **travel-planner**
 
 ## Running the app
 
-To run your newly installed **weather-journal-app**
+To run your newly installed **travel-planner**
 - Run ``` yarn start ```
 
 
